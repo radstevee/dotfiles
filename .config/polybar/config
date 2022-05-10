@@ -149,8 +149,7 @@ format-volume = <label-volume>
 
 label-volume = %percentage%%
 
-label-muted = vol muted
-label-muted-foreground = ${colors.primary}
+label-muted = "%{F#96cdfb}蓼 %{F#ddb6f2}muted"
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -200,7 +199,7 @@ type = internal/date
 interval = 1
 
 date = %H:%M
-date-alt = %Y-%m-%d %H:%M:%S
+date-alt = %H:%M:%S - %d.%m.%Y
 
 label =  %date%
 label-foreground = ${colors.primary}

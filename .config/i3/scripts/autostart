@@ -1,0 +1,7 @@
+#!/bin/bash
+feh --bg-scale $HOME/Pictures/wallpaper.jpg
+polybar &
+nmcli con up WIFI_SSID --ask <<< 'WIFI_PASSWD'
+$HOME/deckmaster/deckmaster --deck $HOME/deckmaster/main.deck &
+firefox &
+discord &

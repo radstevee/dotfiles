@@ -5,7 +5,7 @@
 also if you like this shit, gimme a star please
 
 ![showcase](/showcase-image.png)
-![showcase](/showcase-video.mp4)
+![video showcase (too big to show on the readme :\)](/showcase-video.mp4)
 
 ## some info
 - os: endeavouros/arch (endeavouros installed as arch lol)

@@ -1,9 +1,0 @@
-bold = true
-color_mode = "rgb" # ansi, rgb or none
-palette = "pastel" # default, darker, pastel or matrix
-delay_ms = 25
-inherit_style = false
-kinds = ["curved"] # heavy, light, curved, knobby, emoji, outline, dots, blocks
-num_pipes = 5
-reset_threshold = 0.8 # 0.0–1.0
-turn_chance = 0.10 # 0.0–1.0

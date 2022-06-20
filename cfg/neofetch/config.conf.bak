@@ -1,0 +1,64 @@
+print_info() {
+    info "distro" distro
+    info "cpu" cpu
+    info "gpu" gpu
+    info "mem" memory
+    info "kernel" kernel
+    info "de" de
+    info "wm" wm
+    info "term" term
+    info "pkgs" packages
+}
+
+kernel_shorthand="on"
+distro_shorthand="off"
+os_arch="off"
+uptime_shorthand="on"
+memory_percent="on"
+package_managers="on"
+shell_path="off"
+shell_version="on"
+speed_type="bios_limit"
+speed_shorthand="on"
+cpu_brand="off"
+cpu_speed="off"
+cpu_cores="logical"
+cpu_temp="off"
+gpu_brand="off"
+gpu_type="all"
+refresh_rate="on"
+gtk_shorthand="on"
+gtk2="on"
+gtk3="on"
+disk_show=('/')
+bold="on"
+underline_enabled="on"
+underline_char="-"
+seperator=" "
+color_blocks="off"
+block_range=(0 15) # Colorblocks
+
+block_width=4
+block_height=1
+
+bar_char_elapsed="-"
+bar_char_total="="
+bar_border="on"
+bar_length=15
+bar_color_elapsed="distro"
+bar_color_total="distro"
+
+cpu_display="on"
+memory_display="on"
+battery_display="on"
+disk_display="on"
+
+thumbnail_dir="${XDG_CACHE_HOME:-${HOME}/.cache}/thumbnails/neofetch"
+crop_mode="normal"
+crop_offset="center"
+
+gap=2
+
+yoffset=0
+xoffset=0
+

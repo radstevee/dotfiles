@@ -1,0 +1,14 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/opt/st'
+echo st build options:
+echo "CFLAGS  = -I/usr/X11R6/include  `pkg-config --cflags fontconfig`  `pkg-config --cflags freetype2`  `pkg-config --cflags harfbuzz` -DVERSION=\"0.8.4\" -D_XOPEN_SOURCE=600  -O1"
+echo "LDFLAGS = -L/usr/X11R6/lib -lm -lrt -lX11 -lutil -lXft  `pkg-config --libs fontconfig`  `pkg-config --libs freetype2`  `pkg-config --libs harfbuzz` "
+echo "CC      = c99"
+cp config.def.h config.h
+c99 -I/usr/X11R6/include  `pkg-config --cflags fontconfig`  `pkg-config --cflags freetype2`  `pkg-config --cflags harfbuzz` -DVERSION=\"0.8.4\" -D_XOPEN_SOURCE=600  -O1 -c st.c
+c99 -I/usr/X11R6/include  `pkg-config --cflags fontconfig`  `pkg-config --cflags freetype2`  `pkg-config --cflags harfbuzz` -DVERSION=\"0.8.4\" -D_XOPEN_SOURCE=600  -O1 -c x.c
+c99 -I/usr/X11R6/include  `pkg-config --cflags fontconfig`  `pkg-config --cflags freetype2`  `pkg-config --cflags harfbuzz` -DVERSION=\"0.8.4\" -D_XOPEN_SOURCE=600  -O1 -c boxdraw.c
+c99 -I/usr/X11R6/include  `pkg-config --cflags fontconfig`  `pkg-config --cflags freetype2`  `pkg-config --cflags harfbuzz` -DVERSION=\"0.8.4\" -D_XOPEN_SOURCE=600  -O1 -c hb.c
+c99 -o st st.o x.o boxdraw.o hb.o -L/usr/X11R6/lib -lm -lrt -lX11 -lutil -lXft  `pkg-config --libs fontconfig`  `pkg-config --libs freetype2`  `pkg-config --libs harfbuzz` 
+make: Leaving directory '/opt/st'
+ 

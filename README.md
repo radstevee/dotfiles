@@ -4,8 +4,8 @@
 
 also if you like this shit, gimme a star please
 
-![showcase](/showcase.png)
-![showcase](/showcase.mp4)
+![showcase](/showcase-image.png)
+![showcase](/showcase-video.mp4)
 
 ## some info
 - os: endeavouros/arch (endeavouros installed as arch lol)

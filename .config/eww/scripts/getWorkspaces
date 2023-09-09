@@ -53,7 +53,7 @@ workspaces() {
       ic_7="" # nf-fa-dot_circle_o
   fi
 
-  code="(box :class \"works\" :spacing \"-1\" :orientation \"h\" :halign \"center\" :space-evenly \"true\" (button :onclick \"bspc desktop -f $ws1\"	:class \"$un$o1$f1\" :halign \"center\"	\"$ic_1\") (button :onclick \"bspc desktop -f $ws2\"	:class \"$un$o2$f2\" :halign \"center\" \"$ic_2\") (button :onclick \"bspc desktop -f $ws3\"	:class \"$un$o3$f3\" :halign \"center\" \"$ic_3\")(button :onclick \"bspc desktop -f $ws4\"	:class \"$un$o4$f4\" :halign \"center\" \"$ic_4\") (button :onclick \"bspc desktop -f $ws5\"	:class \"$un$o5$f5\" :halign \"center\" \"$ic_5\")  (button :onclick \"bspc desktop -f $ws6\"	:class \"$un$o6$f6\" :halign \"center\" \"$ic_6\")  (button :onclick \"bspc desktop -f $ws7\" :class \"$un$o7$f7\" :halign \"center\" \"$ic_7\"))"
+  code="(box :class \"works\" :spacing \"-1\" :orientation \"h\" :halign \"center\" :space-evenly \"true\" (button :onclick \"bspc desktop -f $ws1\"	:class \"w$un$o1$f1\" :halign \"center\"	\"$ic_1\") (button :onclick \"bspc desktop -f $ws2\"	:class \"w$un$o2$f2\" :halign \"center\" \"$ic_2\") (button :onclick \"bspc desktop -f $ws3\"	:class \"w$un$o3$f3\" :halign \"center\" \"$ic_3\")(button :onclick \"bspc desktop -f $ws4\"	:class \"w$un$o4$f4\" :halign \"center\" \"$ic_4\") (button :onclick \"bspc desktop -f $ws5\"	:class \"w$un$o5$f5\" :halign \"center\" \"$ic_5\")  (button :onclick \"bspc desktop -f $ws6\"	:class \"w$un$o6$f6\" :halign \"center\" \"$ic_6\")  (button :onclick \"bspc desktop -f $ws7\" :class \"w$un$o7$f7\" :halign \"center\" \"$ic_7\"))"
   
   echo "$code"
 }

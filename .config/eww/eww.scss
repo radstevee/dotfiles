@@ -1,6 +1,4 @@
 @import "_colors";
-@import "dashboard";
-@import "music";
 
 .bar {
   background-color: $bg;
@@ -30,7 +28,7 @@
   font-size: 20px;
   background-color: $bg;
 
-  .0 {
+  .w0 {
     color: $bgSecondary;
     background-color: $bg;
     padding: 10px 7px 10px 7px;
@@ -41,13 +39,13 @@
     }*/
   }
 
-  .01,
-  .02,
-  .03,
-  .04,
-  .05,
-  .06,
-  .07 {
+  .w01,
+  .w02,
+  .w03,
+  .w04,
+  .w05,
+  .w06,
+  .w07 {
     color: $fg;
     background-color: $bg;
     padding: 10px 7px 10px 7px;
@@ -58,13 +56,13 @@
     }*/
   }
 
-  .011,
-  .022,
-  .033,
-  .044,
-  .055,
-  .066,
-  .077 {
+  .w011,
+  .w022,
+  .w033,
+  .w044,
+  .w055,
+  .w066,
+  .w077 {
     color: $accent;
     background-color: $bg;
     padding: 10px 7px 10px 7px;
@@ -137,5 +135,3 @@
     padding: 0 10px 0 10px;
     margin: 7px;
 }
-
-

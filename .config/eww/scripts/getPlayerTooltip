@@ -1,0 +1,8 @@
+#!/bin/bash
+current=`playerctl --player=spotify status`
+
+if [ "$current" == "Paused" ]; then
+  echo "Play"
+elif [ "$current" == "Playing" ]; then
+  echo "Pause"
+fi

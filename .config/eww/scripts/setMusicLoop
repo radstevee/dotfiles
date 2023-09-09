@@ -1,0 +1,10 @@
+#!/bin/bash
+current=`playerctl --player=spotify loop`
+
+if [ "$current" == "None" ]; then
+  playerctl --player=spotify loop Playlist
+elif [ "$current" == "Playlist" ]; then
+  playerctl --player=spotify loop Track
+elif [ "$current" == "Track" ]; then
+  playerctl --player=spotify loop None
+fi

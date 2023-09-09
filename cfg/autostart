@@ -1,8 +1,0 @@
-#!/bin/bash
-nm-applet &
-/home/radsteve/.config/polybar/launch.sh
-picom &
-dunst &
-nitrogen --restore
-#feh --bg-scale ~/.config/wallpaper.png
-discord &

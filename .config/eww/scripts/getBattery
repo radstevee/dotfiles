@@ -1,0 +1,43 @@
+#!/bin/bash
+percentage=`/bin/cat /sys/class/power_supply/BAT0/capacity`
+state=`/bin/cat /sys/class/power_supply/BAT0/status`
+
+if [ "$state" == "Discharging" ]; then
+  if [ "$percentage" -ge 97 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 90 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 80 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 70 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 60 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 50 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 40 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 30 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 20 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 10 ]; then
+    echo " $percentage%"
+  fi
+elif [ "$state" == "Charging" ]; then
+  if [ "$percentage" -ge 97 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 90 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 80 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 60 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 40 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 30 ]; then
+    echo " $percentage%"
+  elif [ "$percentage" -ge 20 ]; then
+    echo " $percentage%"
+  fi
+fi

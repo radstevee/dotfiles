@@ -1,0 +1,9 @@
+#!/bin/bash
+isShuffling=`playerctl --player=spotify shuffle`
+if [ "$isShuffling" == "On" ]; then
+  echo "Currently shuffling playlist
+Click to disable"
+elif [ "$isShuffling" == "Off" ]; then
+  echo "Currently not shuffling playlist
+Click to enable"
+fi

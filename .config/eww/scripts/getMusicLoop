@@ -1,0 +1,10 @@
+#!/bin/bash
+current=`playerctl --player=spotify loop`
+
+if [ "$current" == "Playlist" ]; then
+  echo "ﯩ"
+elif [ "$current" == "Track" ]; then
+  echo "¹ﯩ"
+elif [ "$current" == "None" ]; then
+  echo "累"
+fi

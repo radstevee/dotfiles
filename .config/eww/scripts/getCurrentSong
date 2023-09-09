@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SONG=`playerctl --player=spotify --follow metadata --format '{{ artist }} - {{ title }}' &`
+
+if [[ ${#SONG} -gt 35 ]]; then
+  echo ${SONG:0:35}...
+else
+  echo "$SONG"
+fi

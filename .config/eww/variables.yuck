@@ -1,0 +1,46 @@
+(deflisten songArtist :interval "5s"
+"playerctl --player=spotify --follow metadata --format '{{ artist }}'")
+(deflisten songTitle :interval "2s"
+"playerctl --player=spotify --follow metadata --format '{{ title }}'")
+(defpoll playerStatus :interval "1s"
+"./scripts/getPlayerStatus")
+(defpoll playerStatusTooltip :interval "1s"
+"./scripts/getPlayerTooltip")
+(defpoll shuffle :interval "1s"
+"./scripts/getMusicShuffle")
+(defpoll shuffleTooltip :interval "1s"
+"./scripts/getMusicShuffleTooltip")
+(defpoll loop :interval "1s"
+"./scripts/getMusicLoop")
+(defpoll loopTooltip :interval "1s"
+"./scripts/getMusicLoopTooltip")
+
+
+(deflisten workspace "scripts/getWorkspaces")
+
+(deflisten csong
+"playerctl --player=spotify --follow metadata --format '{{ artist }} - {{ title }}'")
+
+;(deflisten csong
+;"./scripts/getCurrentSong")
+
+(defpoll time :interval "1s"
+"date '+%T'")
+
+(defpoll date :interval "1s"
+"date '+%e.%m.%Y'")
+
+(defpoll memUsed :interval "1s"
+"scripts/getRam used")
+
+(defpoll memTotal :interval "1s"
+"scripts/getRam total")
+
+(defpoll memFree :interval "1s"
+"scripts/getRam free")
+
+(defpoll diskUsage :interval "10m"
+"scripts/getDiskUsage")
+
+(defpoll updates :interval "5m"
+"scripts/getUpdates")

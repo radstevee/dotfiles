@@ -1,0 +1,13 @@
+#!/bin/bash
+current=`playerctl --player=spotify loop`
+
+if [ "$current" == "Playlist" ]; then
+  echo "Currently looping playlist
+Click to loop one track"
+elif [ "$current" == "Track" ]; then
+  echo "Currently only looping one track
+Click to disable loop"
+elif [ "$current" == "None" ]; then
+  echo "Currently not looping
+Click to loop the playlist"
+fi

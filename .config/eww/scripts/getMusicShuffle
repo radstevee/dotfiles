@@ -1,0 +1,7 @@
+#!/bin/bash
+isShuffling=`playerctl --player=spotify shuffle`
+if [ "$isShuffling" == "On" ]; then
+  echo "咽" # nf-mdi-shuffle_variant
+elif [ "$isShuffling" == "Off" ]; then
+  echo "劣" # nf-mdi-shuffle_disabled
+fi

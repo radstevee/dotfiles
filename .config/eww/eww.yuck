@@ -1,0 +1,150 @@
+(include "./variables.yuck")
+
+(defwidget launcher[]
+  (box :orientation "h"
+       :class "launcher"
+    (button :class "dispatcher" :onclick "rofi -show drun &" "") ; nf-weather-wind_south
+  )
+)
+
+(defwidget workspaces []
+  (literal :content workspace)
+)
+
+(defwidget music []
+  (box :class "music"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    (button
+      :class "musicbutton"
+      :halign "end"
+      :onclick "eww windows | grep --color=never '*music' > /dev/null && eww close music || eww open music"
+      "${csong}"
+    )
+  )
+)
+
+(defwidget time []
+  (box :class "time"
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    (button
+      :class "timebutton"
+      :halign "end"
+      :onclick "notify-send 'Date & Time' '${time}
+${date}'"
+      " ${time}" ; nf-mdi-calendar_clock
+    )
+  )
+)
+
+(defwidget sep []
+  (label :class "sep" :text "")
+)
+
+(defwidget mem []
+  (box :class "mem"
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    (button
+      :class "membutton"
+      :halign "end"
+      :onclick "alacritty -e htop &"
+      " ${memUsed}" ; nf-mdi-memory
+    )
+  )
+)
+
+
+(defwidget diskusage []
+  (box :class "diskusage"
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    (button
+      :class "diskusagebutton"
+      :halign "end"
+      :onclick "alacritty -e gdu / &"
+      " ${diskUsage}" ; nf-mdi-harddisk
+    )
+  )
+)
+
+
+(defwidget updates []
+  (box :class "updates"
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    (button
+      :class "updatesbutton"
+      :halign "end"
+      :onclick "
+      if [ \"${updates}\" -eq 0 ]; then
+        return
+      elif [ \"${updates}\" -gt 0 ]; then
+        alacritty -e yay &
+      fi
+      "
+      "${updates} ﮮ" ; nf-mdi-update
+    )
+  )
+)
+
+
+(defwidget bar []
+  (box :class "bar"
+       :orientation "h"
+    (left)
+    (center)
+    (right)
+  )
+)
+
+(defwidget left []
+  (box :orientation "h"
+       :space-evenly "false"
+       :halign "start"
+       :class "left"
+  (launcher)
+  (workspaces))
+)
+
+(defwidget center []
+  (box :class "center-widgets"
+       :space-evenly "false"
+       :halign "center"
+       :orientation "h"
+    (music)
+  )
+)
+
+(defwidget right []
+  (box :class "right-modules"
+       :space-evenly "false"
+       :halign "end"
+       :orientation "h"
+    (updates)
+    (sep)
+    ;(battery)
+    ;(sep)
+    (mem)
+    (sep)
+    (diskusage)
+    (sep)
+    (time)
+  )
+)
+
+(defwindow bar
+   :geometry (geometry :x "10px"
+                       :y "1002px"
+                       :width "1900px"
+                       :height "29px")
+   :stacking "fg"
+   :windowtype "dock"
+   :wm-ignore false
+ (bar))

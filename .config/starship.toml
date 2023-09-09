@@ -1,0 +1,15 @@
+# "editor completions" (don't work)
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = "$character $directory [❯](bold #fc7b81)[❯](bold #8cc1ff)[❯](bold #f1cf8a) "
+right_format = "$git_branch"
+
+# i dont like a new line
+add_newline = false
+
+[directory]
+format = "[$path](#c68aee)"
+
+[character] 
+success_symbol = "[](bold #94f7c5)" 
+error_symbol = "[](bold #fc7b81)"

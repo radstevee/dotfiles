@@ -1,0 +1,38 @@
+(include "./variables.yuck")
+
+(defvar song_art "")
+
+(defwidget _music []
+  (box :class "music-player" :orientation "h" :space-evenly "false"
+    (box :class "song-art" :tooltip "${songArtist} - ${songTitle}" song_art 
+      (box :class "music-info" :orientation "v" :space-evenly "false"
+        (box :class "np" :orientation "h" :space-evenly "false" :halign "center"
+          (label :class "now-playing" :text "Now Playing")
+        )
+        (box :class "title" :orientation "h" :space-evenly "false" :halign "center"
+          (label :class "song-title" :text "${songTitle}")
+        )
+        (box :class "artist" :orientation "h" :space-evenly "false" :halign "center"
+          (label :class "song-artist" :text "by ${songArtist}")
+        )
+        (box :class "song-controls" :orientation "h" :space-evenly true :halign "center"
+          (button :onclick "playerctl --player=spotify shuffle Toggle" :tooltip "${shuffleTooltip}" "${shuffle}")
+          (button :onclick "playerctl --player=spotify previous" :tooltip "Previous song" "玲")
+          (button :class "play-pause" :onclick "playerctl --player=spotify play-pause" :tooltip "${playerStatusTooltip}" "${playerStatus}")
+          (button :onclick "playerctl --player=spotify next" :tooltip "Next song" "怜")
+          (button :onclick "./scripts/setMusicLoop" :tooltip "${loopTooltip}" "${loop}")
+        )
+      )
+    )
+  )
+)
+
+(defwindow music
+  :geometry (geometry :x "810px"
+    :y "440px"    
+    :width "60px"
+  :height "140px")
+  :stacking "fg"
+  :windowtype "normal"
+  :wm-ignore false
+  (_music))

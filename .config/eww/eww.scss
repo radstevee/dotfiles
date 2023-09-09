@@ -1,0 +1,141 @@
+@import "_colors";
+@import "dashboard";
+@import "music";
+
+.bar {
+  background-color: $bg;
+  font-family: "Maple Mono SC NF";
+  color: $fg;
+  padding: 10px;
+}
+
+.launcher {
+  margin: 7px 0 7px 7px;
+  font-size: 14px;
+  color: $fg;
+
+  .dispatcher {
+    background-color: $accent;
+    color: $bg;
+    border-radius: 5px;
+    font-size: 27px;
+    padding: 1px 11px 1px 11px;
+  }
+}
+
+.works {
+  margin-top: 5px;
+  margin-left: 13px;
+  margin-right: 13px;
+  font-size: 20px;
+  background-color: $bg;
+
+  .0 {
+    color: $bgSecondary;
+    background-color: $bg;
+    padding: 10px 7px 10px 7px;
+
+    /*&:hover {
+			background-color: $bg;
+      color: $fgDim;
+    }*/
+  }
+
+  .01,
+  .02,
+  .03,
+  .04,
+  .05,
+  .06,
+  .07 {
+    color: $fg;
+    background-color: $bg;
+    padding: 10px 7px 10px 7px;
+
+    /*&:hover {
+			background-color: $bg;
+      color: $bgSecondaryAlt;
+    }*/
+  }
+
+  .011,
+  .022,
+  .033,
+  .044,
+  .055,
+  .066,
+  .077 {
+    color: $accent;
+    background-color: $bg;
+    padding: 10px 7px 10px 7px;
+
+    /*&:hover {
+      color: $blue;
+    }*/
+  }
+}
+
+.sep {
+  color: $bg;
+  margin: 0 1px 0 0;
+}
+
+.timebutton {
+    background-color: $accent;
+    color: $bg;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 7px 14px 7px 10px;
+    margin: 7px;
+}
+
+
+.batterybutton {
+    background-color: $accent;
+    color: $bg;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 7px 10px 7px 10px;
+    margin: 7px;
+}
+
+
+.musicbutton {
+    background-color: $accent;
+    color: $bg;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 7px 10px 7px 10px;
+    margin: 7px;
+}
+
+
+.membutton {
+    background-color: $accent;
+    color: $bg;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0 10px 0 10px;
+    margin: 7px;
+}
+
+.diskusagebutton {
+    background-color: $accent;
+    color: $bg;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0 10px 0 10px;
+    margin: 7px;
+}
+
+
+.updatesbutton {
+    background-color: $accent;
+    color: $bg;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0 10px 0 10px;
+    margin: 7px;
+}
+
+

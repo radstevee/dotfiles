@@ -1,5 +1,7 @@
 ## My dotfiles
 
+![Preview](preview.png)
+
 ## Info
 - Distro: Arch 
 - WM: BSPwm

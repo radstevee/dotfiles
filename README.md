@@ -1,6 +1,6 @@
 ## My dotfiles
 
-![Preview](preview.png)
+![Preview](showcase.png)
 
 ## Info
 - Distro: Arch 
